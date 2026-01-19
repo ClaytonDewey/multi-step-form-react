@@ -8,4 +8,7 @@ export const onboardingSchema = z.object({
   repeatPassword: z.string().min(8).max(20),
   terms: z.boolean().refine((data) => data),
 });
+
+export type OnboardingSchema = z.infer<typeof onboardingSchema>;
+
 // https://youtu.be/vKJe95pqn8E?si=Xfntos4b8xby1fEp
